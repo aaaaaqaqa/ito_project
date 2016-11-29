@@ -3,3 +3,31 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
 }
+
+.jumbotron {
+  padding-top:    @jumbotron-padding;
+  padding-bottom: @jumbotron-padding;
+  margin-bottom: @jumbotron-padding;
+  color: @jumbotron-color;
+  background-color: #337ab7;
+}
+.container1{
+  text-align: center;
+  background-color: greenyellow;
+}
+
+.hoge{
+    background-color: aqua;
+    text-align: center
+}
+.hoge2{
+    background-color: beige;
+    text-align: center
+}
+.hoge3{
+    background-color: cadetblue;
+    text-align: center
+}
+img{
+    padding-top:20px;
+}
