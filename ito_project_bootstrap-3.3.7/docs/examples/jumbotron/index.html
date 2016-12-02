@@ -29,6 +29,41 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+$(function(){
+    jQuery.preloadImages = function(){
+        for(var i = 0; i<arguments.length; i++){
+            jQuery("<img>").attr("src", arguments[i]);
+        }
+    };
+    $.preloadImages("http://sbc.evolable.asia/wp-content/uploads/2016/12/1mfsrb6sbqw-nitish-meena-2.jpg");
+});
+</script>
+
+      <script language="javascript">
+window.onload = function() {
+
+  var placeholder = document.querySelector('.placeholder'),
+      small = placeholder.querySelector('.img-small')
+
+  // 1: load small image and show it
+  var img = new Image();
+  img.src = small.src;
+  img.onload = function () {
+   small.classList.add('loaded');
+  };
+
+  // 2: load large image
+  var imgLarge = new Image();
+  imgLarge.src = placeholder.dataset.large;
+  imgLarge.onload = function () {
+    imgLarge.classList.add('loaded');
+  };
+  placeholder.appendChild(imgLarge);
+}
+</script>
+
   </head>
 
   <body>
@@ -58,6 +93,13 @@
       </div>
     </nav>
 
+   <div class="row top-banner">
+   <div class="placeholder" data-large="http://sbc.evolable.asia/wp-content/uploads/2016/12/1mfsrb6sbqw-nitish-meena.jpg">
+  <img src="http://sbc.evolable.asia/wp-content/uploads/2016/12/1mfsrb6sbqw-nitish-meena-2.jpg" class="img-small">
+  <div style="padding-bottom: 66.6%;"></div>
+</div>
+    </div>
+
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container container1">
@@ -83,6 +125,8 @@
       </div>
     </div>
     </div>
+
+
 
     <div class="row">
     <div class="col-sm-6 aaa">
@@ -137,5 +181,12 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+
+
+
+
+
+
   </body>
 </html>
